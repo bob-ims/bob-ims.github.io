@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宇宙海贼-星际冒险与太空海盗文化全解析</title>
+    <meta name="description" content="探索宇宙海贼的传奇世界，了解经典作品、星际舰船、组织设定与冒险故事。为科幻迷与太空海盗文化爱好者提供深度内容指南。">
+    <meta name="keywords" content="宇宙海贼,太空海盗,星际冒险,科幻海盗,宇宙海盗题材,星际航行,舰船设定">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background: #0a0e1a;
+            color: #c8d6e5;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a {
+            color: #f39c12;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #f1c40f;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #0b1b2b 0%, #1a2f3f 100%);
+            border-bottom: 2px solid #f39c12;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        }
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-icon {
+            font-size: 2.2rem;
+            filter: drop-shadow(0 0 8px rgba(243,156,18,0.5));
+        }
+        .logo-text {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(90deg, #f39c12, #f1c40f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+        nav a {
+            font-size: 1rem;
+            padding: 8px 4px;
+            position: relative;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #f39c12;
+            transition: width 0.3s;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .hero {
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="g" cx="30%25" cy="40%25" r="70%25"><stop offset="0%25" stop-color="%231b3a4a"/><stop offset="100%25" stop-color="%23050810"/></radialGradient></defs><rect fill="url(%23g)" width="1200" height="600"/><circle cx="800" cy="150" r="3" fill="%23fff" opacity="0.6"/><circle cx="200" cy="100" r="2" fill="%23fff" opacity="0.4"/><circle cx="1000" cy="400" r="2" fill="%23fff" opacity="0.5"/><circle cx="350" cy="450" r="2" fill="%23fff" opacity="0.7"/><circle cx="650" cy="80" r="2" fill="%23fff" opacity="0.5"/><circle cx="1100" cy="250" r="2" fill="%23fff" opacity="0.4"/><circle cx="150" cy="300" r="2" fill="%23fff" opacity="0.3"/><path d="M0 500 Q300 450 600 520 T1200 500 L1200 600 L0 600 Z" fill="%230a0e1a" opacity="0.7"/></svg>') no-repeat center center/cover;
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 14, 26, 0.5);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 3.2rem;
+            color: #fff;
+            text-shadow: 0 0 30px rgba(243,156,18,0.6);
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+            font-weight: 800;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #aab8c5;
+        }
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #f39c12, #e67e22);
+            color: #0a0e1a;
+            box-shadow: 0 4px 15px rgba(243,156,18,0.3);
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(243,156,18,0.5);
+            color: #0a0e1a;
+        }
+        .btn-outline {
+            border: 2px solid #f39c12;
+            color: #f39c12;
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background: rgba(243,156,18,0.1);
+            color: #f1c40f;
+        }
+        .section {
+            padding: 70px 0;
+        }
+        .section-title {
+            font-size: 2rem;
+            color: #f39c12;
+            text-align: center;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+            position: relative;
+            display: inline-block;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #7f8c9b;
+            margin-bottom: 40px;
+            font-size: 1rem;
+        }
+        .title-wrap {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .title-wrap .line {
+            width: 80px;
+            height: 3px;
+            background: #f39c12;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .card {
+            background: linear-gradient(145deg, #111a28, #0d1520);
+            border: 1px solid #1e2d3d;
+            border-radius: 12px;
+            padding: 30px 25px;
+            transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+            border-color: #f39c12;
+        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .card h3 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .card p {
+            color: #9aa7b5;
+            font-size: 0.95rem;
+        }
+        .featured-list {
+            list-style: none;
+            margin-top: 10px;
+        }
+        .featured-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #1e2d3d;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .featured-list li::before {
+            content: "⚓";
+            color: #f39c12;
+        }
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        .info-panel {
+            background: #0f1825;
+            border-radius: 16px;
+            padding: 35px;
+            border: 1px solid #1e2d3d;
+        }
+        .info-panel h2 {
+            color: #f39c12;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+        .info-panel p {
+            margin-bottom: 15px;
+        }
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg, #f39c12, #e67e22);
+            border-radius: 3px;
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -28px;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background: #f39c12;
+            border-radius: 50%;
+            border: 2px solid #0a0e1a;
+        }
+        .timeline-item h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .timeline-item p {
+            color: #8a99a8;
+            font-size: 0.9rem;
+        }
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .work-item {
+            background: #111c2a;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #1e2d3d;
+            transition: all 0.3s;
+        }
+        .work-item:hover {
+            border-color: #f39c12;
+            transform: scale(1.02);
+        }
+        .work-item .work-year {
+            color: #f39c12;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .work-item h3 {
+            color: #fff;
+            margin: 8px 0;
+            font-size: 1.1rem;
+        }
+        .work-item p {
+            color: #8a99a8;
+            font-size: 0.85rem;
+        }
+        .faq-section {
+            background: #0d1520;
+            border-radius: 16px;
+            padding: 40px;
+        }
+        .faq-item {
+            border-bottom: 1px solid #1e2d3d;
+            padding: 20px 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            color: #f39c12;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-answer {
+            color: #9aa7b5;
+            padding-top: 5px;
+        }
+        .cta-banner {
+            background: linear-gradient(135deg, #1a2f3f, #0b1b2b);
+            border: 1px solid #f39c12;
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-banner h2 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+        .cta-banner p {
+            color: #aab8c5;
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+        footer {
+            background: #050a12;
+            border-top: 2px solid #f39c12;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        .footer-col h4 {
+            color: #f39c12;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        .footer-col ul {
+            list-style: none;
+        }
+        .footer-col li {
+            margin-bottom: 8px;
+        }
+        .footer-col a {
+            color: #8a99a8;
+            font-size: 0.9rem;
+        }
+        .footer-col a:hover {
+            color: #f39c12;
+        }
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #111c2a;
+            color: #5a6a78;
+            font-size: 0.85rem;
+        }
+        @media (max-width: 768px) {
+            .header-wrap {
+                flex-direction: column;
+                gap: 15px;
+            }
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero {
+                padding: 60px 0 40px;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+            .section {
+                padding: 40px 0;
+            }
+            .grid-cards {
+                grid-template-columns: 1fr;
+            }
+            .works-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            .cta-banner {
+                padding: 30px 20px;
+            }
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="container header-wrap">
+        <div class="logo">
+            <span class="logo-icon">⚓</span>
+            <span class="logo-text">宇宙海贼</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">首页</a></li>
+                <li><a href="#about">设定解析</a></li>
+                <li><a href="#works">经典作品</a></li>
+                <li><a href="#ships">舰船图鉴</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <h1>宇宙海贼</h1>
+        <p>在浩瀚星海之间，有一群追逐自由与梦想的冒险者。他们驾驶着改装舰船，穿越银河边界，书写着属于星际海盗的传奇篇章。</p>
+        <div class="btn-group">
+            <a href="#works" class="btn btn-primary">探索经典作品</a>
+            <a href="#ships" class="btn btn-outline">查看舰船图鉴</a>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="section-title">宇宙海贼文化解析</h2>
+            <div class="line"></div>
+            <p class="section-subtitle">从文学经典到影像传奇，深入理解这一独特科幻母题</p>
+        </div>
+        <div class="two-col">
+            <div class="info-panel">
+                <h2>什么是宇宙海贼？</h2>
+                <p>宇宙海贼，又称太空海盗，是科幻作品中一个经典的角色类型。他们通常以星际为舞台，驾驶能够进行超光速航行的舰船，在各大行星、空间站和贸易航线之间游弋。与传统海洋海盗不同，宇宙海贼的活动范围扩展到了整个银河系，甚至更远的星系。</p>
+                <p>这一概念融合了冒险精神、反叛意识、自由主义和生存法则。宇宙海贼往往被描绘为在帝国或联邦体制之外活动的独立势力，他们的行为准则、组织架构和生活方式构成了科幻世界中一道独特的风景线。</p>
+                <p>从文化角度看，宇宙海贼代表了人类对未知的探索欲望，对权威的反抗，以及对无限空间自由的向往。这种浪漫化的形象，使其成为文学、影视、动漫和游戏领域长盛不衰的创作题材。</p>
+            </div>
+            <div class="info-panel">
+                <h2>核心特征</h2>
+                <ul class="featured-list">
+                    <li><strong>舰船文化</strong> - 每一艘海贼船都是独特的个体，经过高度改装，反映船长的个性。</li>
+                    <li><strong>组织架构</strong> - 从单舰作战到庞大的海盗联盟，组织结构多样，等级分明。</li>
+                    <li><strong>自由信条</strong> - 不受星系政府管制，追求行动自由与财富积累。</li>
+                    <li><strong>灰色地带</strong> - 他们亦正亦邪，有时是掠夺者，有时又成为反抗暴政的英雄。</li>
+                    <li><strong>星际导航</strong> - 掌握着秘密航线、跳跃点和空间站资源。</li>
+                    <li><strong>独特美学</strong> - 充满工业感、拼接感与复古未来主义的视觉风格。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="works" style="background: #0d1520;">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="section-title">经典作品与宇宙</h2>
+            <div class="line"></div>
+            <p class="section-subtitle">横跨多个媒介的宇宙海贼题材代表作</p>
+        </div>
+        <div class="works-grid">
+            <div class="work-item">
+                <span class="work-year">动漫</span>
+                <h3>星际牛仔</h3>
+                <p>融合西部片与黑色电影风格的太空歌剧</p>
+            </div>
+            <div class="work-item">
+                <span class="work-year">电影</span>
+                <h3>银河护卫队</h3>
+                <p>一群星际浪子的冒险故事，充满幽默与感动</p>
+            </div>
+            <div class="work-item">
+                <span class="work-year">漫画</span>
+                <h3>海贼王</h3>
+                <p>虽然以海洋为舞台，但其自由精神与宇宙海贼一脉相承</p>
+            </div>
+            <div class="work-item">
+                <span class="work-year">游戏</span>
+                <h3>星际拓荒</h3>
+                <p>开放世界太空探索，玩家可以自由选择成为海盗或商人</p>
+            </div>
+            <div class="work-item">
+                <span class="work-year">动画</span>
+                <h3>宇宙骑士</h3>
+                <p>经典日本科幻动画，探讨人与宇宙的关系</p>
+            </div>
+            <div class="work-item">
+                <span class="work-year">小说</span>
+                <h3>银河英雄传说</h3>
+                <p>虽然聚焦于战争，但其中对自由势力的描写极具深度</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="ships">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="section-title">知名舰船图鉴</h2>
+            <div class="line"></div>
+            <p class="section-subtitle">每一艘舰船都承载着一段星际传奇</p>
+        </div>
+        <div class="grid-cards">
+            <div class="card">
+                <span class="card-icon">🚀</span>
+                <h3>猎户座号</h3>
+                <p>经典的重型巡洋舰，配备双联装激光炮塔与离子护盾。以强大的火力输出和坚固的装甲著称，是大型海盗舰队的旗舰选择。</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🛸</span>
+                <h3>幽灵拦截者</h3>
+                <p>小型高速拦截舰，采用隐形涂层与矢量推进系统。擅长游击战与侦察任务，是海盗斥候部队的核心力量。</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">⚡</span>
+                <h3>极光货舰</h3>
+                <p>经过深度改装的货船，外表看似普通商船，实则隐藏着强大的引擎与武器系统。适合渗透与突袭行动。</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🌌</span>
+                <h3>星尘母舰</h3>
+                <p>巨型移动要塞，拥有机库、维修工厂和生活区域，能够支持数百名船员进行长期星际航行。是海盗集团的核心枢纽。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="padding-top: 0;">
+    <div class="container">
+        <div class="cta-banner">
+            <h2>开启你的星际冒险</h2>
+            <p>无论是欣赏经典作品，还是创作自己的宇宙海贼故事，这里都有你需要的灵感与知识储备。</p>
+            <a href="#faq" class="btn btn-primary">了解更多</a>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="timeline" style="padding-top: 0;">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="section-title">宇宙海贼题材的演变</h2>
+            <div class="line"></div>
+        </div>
+        <div class="two-col">
+            <div class="info-panel">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>早期萌芽</h3>
+                        <p>20世纪初的科幻小说中开始出现星际冒险与太空走私者的雏形。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>黄金时代</h3>
+                        <p>20世纪50-60年代，随着科幻文学的繁荣，太空海盗的形象被正式确立并广泛传播。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>影像化发展</h3>
+                        <p>70年代后，电影和电视技术让宇宙海贼的视觉形象更加丰富，成为流行文化的一部分。</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h3>多元融合</h3>
+                        <p>当代作品将宇宙海贼与赛博朋克、蒸汽朋克等元素结合，创造出更多样的风格。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="info-panel">
+                <h2>为什么宇宙海贼如此迷人？</h2>
+                <p>宇宙海贼的核心魅力在于他们代表了人类精神中最原始的冲动：对未知的好奇、对自由的渴望、对权威的反叛。在现实世界规则日益复杂的今天，宇宙海贼提供了一个纯粹的自由空间想象。</p>
+                <p>此外，宇宙海贼也承载着浪漫主义情怀。他们拥有自己的道德准则，往往在掠夺之外展现出仗义、忠诚与牺牲精神。这种复杂而立体的人物形象，让观众和读者能够在他们身上找到共鸣与投射。</p>
+                <p>从创作角度看，宇宙海贼题材提供了极大的叙事自由度。你可以讲述宏大的星际战争，也可以聚焦小人物的生存挣扎；可以探讨科技伦理，也可以呈现多元文化碰撞。这种包容性使得宇宙海贼题材历久弥新。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="faq" style="background: #0d1520;">
+    <div class="container">
+        <div class="title-wrap">
+            <h2 class="section-title">常见问题</h2>
+            <div class="line"></div>
+        </div>
+        <div class="faq-section">
+            <div class="faq-item">
+                <div class="faq-question">宇宙海贼和普通海盗有什么本质区别？</div>
+                <div class="faq-answer">最核心的区别在于活动空间和技术水平。宇宙海贼以星际空间为舞台，涉及超光速航行、轨道作战、行星登陆等高等科技活动。他们的威胁范围和影响力远超海洋海盗，同时也拥有更复杂的政治与经济背景。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">有哪些值得推荐的宇宙海贼题材入门作品？</div>
+                <div class="faq-answer">对于新手，推荐从影视作品入手，如《银河护卫队》系列，它轻松有趣且视觉华丽。如果偏好深度叙事，可以阅读《银河英雄传说》或观看经典动画《星际牛仔》。游戏玩家则可以尝试《星际拓荒》或《无人深空》这类开放世界作品。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何创作一个独特的宇宙海贼角色？</div>
+                <div class="faq-answer">建议从三个维度入手：给角色一个独特的背景故事（如前帝国军官、被流放的科学家等）；赋予明确的道德准则与行动动机（是纯粹求财还是反抗体制？）；设计标志性的舰船与装备风格。最重要的是让人物拥有矛盾与成长空间，避免脸谱化。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">宇宙海贼题材适合怎样的世界观设定？</div>
+                <div class="faq-answer">宇宙海贼适合在拥有多个星系势力、存在贸易航线与资源争夺的宇宙背景下展开。需要设定基本的科技水平（如超光速引擎）、政治格局（帝国、联邦、自由星系等）以及地下世界的规则。一个开放且充满机会的世界观会为宇宙海贼活动提供充足舞台。</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>内容导航</h4>
+                <ul>
+                    <li><a href="#about">设定解析</a></li>
+                    <li><a href="#works">经典作品</a></li>
+                    <li><a href="#ships">舰船图鉴</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>推荐专题</h4>
+                <ul>
+                    <li><a href="#">星际舰船设计指南</a></li>
+                    <li><a href="#">宇宙海贼组织架构</a></li>
+                    <li><a href="#">太空武器系统详解</a></li>
+                    <li><a href="#">星际贸易路线图</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <ul>
+                    <li><a href="#">内容声明</a></li>
+                    <li><a href="#">投稿指南</a></li>
+                    <li><a href="#">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>© 2024 宇宙海贼专题站 - 星际冒险文化爱好者的精神家园</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
